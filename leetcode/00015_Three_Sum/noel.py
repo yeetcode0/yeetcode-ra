@@ -7,7 +7,7 @@ class Solution:
 
     def twoSum(self, input: List[int], index_start: int, index_end: int, target: int) -> List[tuple[int,int]]:
 
-        b_and_c_indexes_list = []
+        b_and_c_list = []
 
         x = set()
         while index_start < index_end:
@@ -20,14 +20,14 @@ class Solution:
                 start_val = input[index_start]
                 end_val = input[index_end]
                 if start_val not in x:
-                    b_and_c_indexes_list.append((start_val,end_val))
+                    b_and_c_list.append((start_val,end_val))
 
                     x.add(start_val)
                     x.add(end_val)
                 index_end -= 1
                 index_start += 1
 
-        return b_and_c_indexes_list
+        return b_and_c_list
 
     def threeSum(self, input: List[int]) -> List[List[int]]:
         input.sort()

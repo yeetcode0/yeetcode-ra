@@ -1,0 +1,11 @@
+# You are given N numbers on a circle, described by an array A. Find the
+# maximum number of neighbouring pairs whose sums are even. 
+# One element can belong to only one pair.
+# Write a function:
+# def solution(A)
+# that, given an array A consisting of N integers, returns the maximum
+# number of neighbouring pairs whose sums are even.
+# Examples:
+# 1. Given A = [4, 2, 5, 8, 7, 3, 71, the function should return 2. We can create
+# two pairs with even sums: (A[0], A[1]) and (A[4], A[5]). Another way to
+# choose two pairs is: (A[0], A[1]) and (A[5], A[6]).

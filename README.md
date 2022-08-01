@@ -1,11 +1,11 @@
 
 # File Structure
 
-├── provider
-│   ├── qnNo-qnTitle
-│   │   └── submitter.py
-│   └── 00977-SquaresOfASortedArray
-│       └── noel.py
+├── provider\
+│   ├── qnNo-qnTitle\
+│   │   └── submitter.py\
+│   └── 00977-SquaresOfASortedArray\
+│       └── noel.py\
 
 # Your first submission
 

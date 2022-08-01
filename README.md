@@ -1,7 +1,8 @@
 
 # File Structure
 
-├── provider\
+├── provider
+
 │   ├── qnNo-qnTitle\
 │   │   └── submitter.py\
 │   └── 00977-SquaresOfASortedArray\

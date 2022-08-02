@@ -33,6 +33,7 @@ Create PR for solutions and tag label solution:
 ![pr](pr.png)
 
 Title: Problem Name
+
 Label: solution
 
 -------------------------

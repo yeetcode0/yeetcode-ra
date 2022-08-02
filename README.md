@@ -4,6 +4,13 @@
 ![s](fs.png)
 
 
+# Formating
+
+For tidyness, run the following linters.
+
+| Language  | Linter |
+| ------------- | ------------- |
+| Python  | black  |
 
 -------------------------
 # Contributing

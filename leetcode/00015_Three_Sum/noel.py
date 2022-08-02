@@ -1,11 +1,10 @@
 from typing import *
 
 
-
 class Solution:
-
-
-    def twoSum(self, input: List[int], index_start: int, index_end: int, target: int) -> List[tuple[int,int]]:
+    def twoSum(
+        self, input: List[int], index_start: int, index_end: int, target: int
+    ) -> List[tuple[int, int]]:
 
         b_and_c_list = []
 
@@ -20,7 +19,7 @@ class Solution:
                 start_val = input[index_start]
                 end_val = input[index_end]
                 if start_val not in x:
-                    b_and_c_list.append((start_val,end_val))
+                    b_and_c_list.append((start_val, end_val))
 
                     x.add(start_val)
                     x.add(end_val)
@@ -43,18 +42,16 @@ class Solution:
                 pass
             else:
                 a = input[cursor]
-                sum = (-a)
-                b_and_c_list = self.twoSum(input,cursor + 1, last_index,sum)
-                for (b,c) in b_and_c_list:
-                    soln_set.append([a,b, c])
+                sum = -a
+                b_and_c_list = self.twoSum(input, cursor + 1, last_index, sum)
+                for (b, c) in b_and_c_list:
+                    soln_set.append([a, b, c])
             cursor += 1
 
         return soln_set
 
+
 s = Solution()
 
-s.threeSum([0,1,2])
-s.threeSum([-1,0,1,2,-1,-4])
-
-
-
+s.threeSum([0, 1, 2])
+s.threeSum([-1, 0, 1, 2, -1, -4])

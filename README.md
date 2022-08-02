@@ -24,7 +24,7 @@ If you have prepared solutions before hand and would like peer review, create a 
 
 ### Pull Requests
 
-while yeetcoders will be granted permission to push, using PRs and github features to help us keep track on collaboration matters. its foc too!
+while yeetcoders will be granted permission to push, using PRs and github features can help us keep track on collaboration matters. its foc too!
 
 Create PR for solutions and tag label solution:
 

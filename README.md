@@ -41,4 +41,4 @@ Label: solution
 
 Its a community based repo with no hard and fast rules (just don't delete anything from our combined effort~), please be civic-minded while you contribute :] Have fun yeetcoding~~ 
 
-Submit working solns only and inline-comment on analysis is optional. As a mental exercise, read other's solutions and analyze if need be.
+Merge working solns only and inline-comment on analysis is optional. As a mental exercise, read other's solutions and analyze if need be.

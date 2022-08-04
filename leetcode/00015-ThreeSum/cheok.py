@@ -1,3 +1,6 @@
+from typing import *
+
+
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         def search_pair(nums, target_sum, l, triplets):

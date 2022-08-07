@@ -1,5 +1,6 @@
 from typing import *
 
+
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         max_possible_length = min([len(x) for x in strs])
@@ -9,6 +10,7 @@ class Solution:
                 if char != str[i]:
                     return strs[0][:i]
         return strs[0][:max_possible_length]
+
 
 s = Solution()
 

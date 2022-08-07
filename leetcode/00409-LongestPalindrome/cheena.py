@@ -20,5 +20,4 @@ class Solution:
             if is_odd: 
                 odd_present = True 
                 
-        return length + 1 if odd_present else length 
-
+        return length + 1 if odd_present else length

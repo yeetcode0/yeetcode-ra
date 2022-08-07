@@ -1,66 +1,38 @@
-from time import monotonic_ns
 from typing import *
-
-from numpy import diff
-
-
-# [ 2 , 4 ,5 , 7]
 
 
 class Solution:
-    def twoSumClosest(
-        self, nums: List[int], index_start: int, target: int, known_closest: int
-    ) -> int:
-        nearest_epsilon = known_closest
-        length_nums = len(nums)
-        i = index_start
-        j = length_nums - 1
-
-        while i < j:
-            sum = nums[i] + nums[j]
-
-            epsilon_signed = target - sum
-
-            if nearest_epsilon is None:
-                nearest_epsilon = epsilon_signed
-            elif abs(nearest_epsilon) > abs(epsilon_signed):
-                nearest_epsilon = epsilon_signed
-            else:
-                return nearest_epsilon
-
-            if sum < target:
-                i += 1
-            elif target < sum:
-                j -= 1
-            else:
-                return nearest_epsilon
-
-        return nearest_epsilon
-
     def threeSumClosest(self, nums: List[int], target: int) -> int:
-
         nums.sort()
 
-        nearest_epsilon: int or None = None
-        for i in range(len(nums)):
-            if i > 0 and nums[i] == nums[i - 1]:
-                continue
-            two_sum_target: int = target - nums[i]
-            local_epsilon_signed: int = self.twoSumClosest(
-                nums, i + 1, two_sum_target, nearest_epsilon
-            )
+        length_nums = len(nums)
+        boundary = length_nums - 2
+        index_a = 0
 
-            if nearest_epsilon is None:
-                nearest_epsilon = local_epsilon_signed
-            elif abs(nearest_epsilon) > abs(local_epsilon_signed):
-                nearest_epsilon = local_epsilon_signed
-            else:
-                break
+        nearest_epsilon = None
+        while index_a < boundary:
+            target_b_and_c = target - nums[index_a]
 
-        return target - nearest_epsilon
+            index_b = index_a + 1
+            index_c = length_nums - 1
+
+            while index_b < index_c:
+                actual_b_and_c = nums[index_b] + nums[index_c]
+                epsilon = actual_b_and_c - target_b_and_c
+
+                if epsilon == 0:
+                    return target
+
+                if nearest_epsilon is None or abs(epsilon) < abs(nearest_epsilon):
+                    nearest_epsilon = epsilon
+
+                
+                if epsilon < 0:
+                    index_b += 1
+                else:
+                    index_c -= 1
+            
+            index_a += 1
 
 
-s = Solution()
-
-print(s.threeSumClosest([-1, 2, 1, -4], 1))
-# assert s.threeSumClosest([-1,2,1,-4],1) == 2
+        return target + nearest_epsilon

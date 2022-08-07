@@ -21,4 +21,4 @@ class Solution:
                 odd_present = True 
                 
         return length + 1 if odd_present else length 
-    
+

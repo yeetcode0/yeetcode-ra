@@ -26,13 +26,11 @@ class Solution:
                 if nearest_epsilon is None or abs(epsilon) < abs(nearest_epsilon):
                     nearest_epsilon = epsilon
 
-                
                 if epsilon < 0:
                     index_b += 1
                 else:
                     index_c -= 1
-            
-            index_a += 1
 
+            index_a += 1
 
         return target + nearest_epsilon

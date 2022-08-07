@@ -7,7 +7,7 @@ class Solution:
         dict = {}
         
         for c in s: 
-            if c not in dict:  
+            if c not in dict: 
                 dict[c] = 0
             
             dict[c] += 1 
@@ -20,4 +20,4 @@ class Solution:
             if is_odd: 
                 odd_present = True 
                 
-        return length + 1 if odd_present else length 
+        return length + 1 if odd_present else length
